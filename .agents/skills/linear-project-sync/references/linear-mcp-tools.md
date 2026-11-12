@@ -57,9 +57,9 @@ Consult this only when you need exact parameter names or allowed values.
 - `whoami` — No params. Returns user, workspace, connection info.
 - `list_teams` — No params.
 - `list_projects` — Key filters: `query`, `team`, `state`, `member`.
-- `list_issues` — Key filters: `teamId`, `query`, `status`, `assignee`, `label`, `project`, `cycle`, `priority`. Max 50 per page.
-- `list_issue_statuses` — `teamId` required.
-- `list_issue_labels` — `teamId` required.
+- `list_issues` — Key filters: `team`, `query`, `status`, `assignee`, `label`, `project`, `cycle`, `priority`. Max 50 per page.
+- `list_issue_statuses` — `team` required.
+- `list_issue_labels` — `team` required.
 - `list_cycles` — `teamId` required. Optional `type`: current/previous/next.
 - `list_milestones` — `project` required.
 - `get_status_updates` — `type` required. Optional: `project`, `user`.

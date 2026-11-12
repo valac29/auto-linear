@@ -43,8 +43,8 @@ agent is the interface.
 ```
 Tool: whoami                                    → confirm identity & workspace
 Tool: list_teams                                → cache team names/keys
-Tool: list_issue_statuses  { teamId: "<team>" } → learn valid statuses
-Tool: list_issue_labels    { teamId: "<team>" } → learn valid labels
+Tool: list_issue_statuses  { team: "<team>" }   → learn valid statuses
+Tool: list_issue_labels    { team: "<team>" }   → learn valid labels
 ```
 
 Statuses and labels differ per team — never assume names like "In Progress"
@@ -70,8 +70,8 @@ Trigger: "create an issue", "break this into tasks", "batch create issues"
 
 1. **Duplicate check** — search with keyword variants before creating:
    ```
-   list_issues { teamId: "<team>", query: "<term>" }
-   list_issues { teamId: "<team>", query: "<synonym>" }
+   list_issues { team: "<team>", query: "<term>" }
+   list_issues { team: "<team>", query: "<synonym>" }
    ```
    Flag matches to the user. Don't silently create duplicates.
 
@@ -122,7 +122,7 @@ Trigger: "write a status update", "Monday report", "how's the project going"
 Trigger: "plan the sprint", "what's in the current cycle"
 
 1. `list_cycles { teamId: "<team>", type: "current" }`
-2. `list_issues { teamId: "<team>", cycle: "<cycle>" }` — show current load.
+2. `list_issues { team: "<team>", cycle: "<cycle>" }` — show current load.
 3. Suggest assignments based on priority and capacity.
 4. Move issues: `save_issue { id: "ENG-42", cycle: "<cycle>" }`
 
@@ -130,7 +130,7 @@ Trigger: "plan the sprint", "what's in the current cycle"
 
 Trigger: "mark done", "I merged the PR", "update the issue"
 
-1. Find the issue: `list_issues { teamId: "<team>", query: "<branch-or-pr>" }`
+1. Find the issue: `list_issues { team: "<team>", query: "<branch-or-pr>" }`
 2. Update status: `save_issue { id: "ENG-42", status: "Done" }`
 3. Add context: `save_comment { issueId: "ENG-42", body: "Merged in PR #123" }`
 
@@ -140,10 +140,10 @@ Translate natural questions into tool calls:
 
 | Question | Approach |
 |:---------|:---------|
-| "Show urgent bugs" | `list_issues { teamId, priority: 1, label: "Bug" }` |
-| "What's unassigned?" | `list_issues { teamId }` → filter no assignee |
-| "What's blocking us?" | `list_issues { teamId }` → check relations |
-| "What moved this week?" | `list_issues { teamId, updatedAt: "-P7D" }` |
+| "Show urgent bugs" | `list_issues { team, priority: 1, label: "Bug" }` |
+| "What's unassigned?" | `list_issues { team }` → filter no assignee |
+| "What's blocking us?" | `list_issues { team }` → check relations |
+| "What moved this week?" | `list_issues { team, updatedAt: "-P7D" }` |
 
 ---
 
