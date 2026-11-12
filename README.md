@@ -30,6 +30,14 @@ querying your backlog without opening Linear.
 └── references/linear-mcp-tools.md   # Tool parameter reference
 ```
 
+## Project Tracking & Milestones
+
+- **Linear Project**: [Auto Linear (P-GHO-1)](https://linear.app/ghost-automation/project/auto-linear-2be49b0e51ad)
+- **Active Milestone**: `v1.0 MVP - Antigravity Linear Bridge` (Target: 2026-11-20)
+- **Active Issues**:
+  - [GHO-5](https://linear.app/ghost-automation/issue/GHO-5/implement-linear-project-sync-skill-for-antigravity): Implement linear-project-sync skill for Antigravity
+  - [GHO-6](https://linear.app/ghost-automation/issue/GHO-6/establish-workspace-security-guardrails-and-git-workflow-rules): Establish workspace security guardrails and Git workflow rules
+
 ## Security
 
 - Confirms identity (`whoami`) before any write operation
