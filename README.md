@@ -32,6 +32,7 @@ querying your backlog without opening Linear.
 
 ## Project Tracking & Milestones
 
+- **Mapping Principle**: 1 Linear Project = 1 Git repository (use monorepos for complex multi-package/service projects).
 - **Linear Project**: [Auto Linear (P-GHO-1)](https://linear.app/ghost-automation/project/auto-linear-2be49b0e51ad)
 - **Active Milestone**: `v1.0 MVP - Antigravity Linear Bridge` (Target: 2026-11-20)
 - **Active Issues**:

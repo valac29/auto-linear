@@ -17,3 +17,7 @@
 - **User Confirmation for Batch Ops**: Confirm with the user before creating or updating more than 3 issues at once.
 - **Credential Safety**: Never leak or embed API keys, secrets, tokens, or passwords into Linear tickets or comments.
 - **Duplicate Prevention**: Perform semantic duplicate checks prior to creating new tasks.
+
+## 3. Project & Repository Architecture
+- **1:1 Project-to-Repo Mapping**: Each Linear Project maps directly to 1 Git repository.
+- **Monorepo for Complex Projects**: For complex systems with multiple services, packages, or apps, organize under a monorepo structure to keep Linear tracking, PR linking, and issue references consolidated and easy to track.

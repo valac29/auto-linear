@@ -58,11 +58,14 @@ exist.
 
 Trigger: "set up tracking", "scaffold Linear for this repo"
 
-1. Read `README.md` / `package.json` / `pyproject.toml` for project context.
-2. `list_projects { query: "<name>" }` — check for duplicates.
-3. `save_project { name, description, teams: ["<team>"], state: "started" }`
-4. Optionally create milestones with `save_milestone { project, name, targetDate }`.
-5. Report back with the project identifier and URL.
+1. **Mapping principle:** 1 Linear Project = 1 Git repository. For complex
+   initiatives with multiple packages/services, use a monorepo structure so
+   Linear tracking and PR linking stay consolidated in one project.
+2. Read `README.md` / `package.json` / `pyproject.toml` for project context.
+3. `list_projects { query: "<name>" }` — check for duplicates.
+4. `save_project { name, description, teams: ["<team>"], state: "started" }`
+5. Optionally create milestones with `save_milestone { project, name, targetDate }`.
+6. Report back with the project identifier and URL.
 
 ### 2. Issue Creation
 
