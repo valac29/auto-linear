@@ -57,6 +57,7 @@ Consult this only when you need exact parameter names or allowed values.
 - `whoami` — No params. Returns user, workspace, connection info.
 - `list_teams` — No params.
 - `list_projects` — Key filters: `query`, `team`, `state`, `member`.
+- `get_issue` — `id` required (e.g. LIN-123).
 - `list_issues` — Key filters: `team`, `query`, `status`, `assignee`, `label`, `project`, `cycle`, `priority`. Max 50 per page.
 - `list_issue_statuses` — `team` required.
 - `list_issue_labels` — `team` required.
